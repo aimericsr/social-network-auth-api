@@ -1,8 +1,8 @@
 postgres:
-	docker run -d --name postgres14 -e POSTGRES_USER=root -e POSTGRES_PASSWORD=secretPassword -p 5432:5432 postgres:14-alpine
+	docker run -d --name postgres14 -e POSTGRES_USER=rootUser -e POSTGRES_PASSWORD=secretPassword -p 5432:5432 postgres:14-alpine
 
 createdb:
-	docker exec -it postgres14 createdb --username=root --owner=root festivales
+	docker exec -it postgres14 createdb --username=rootUser --owner=rootUser social_network
 
 dropdb:
 	docker exec -it postgres14 dropdb festivales
