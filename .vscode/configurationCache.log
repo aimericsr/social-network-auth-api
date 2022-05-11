@@ -1,0 +1,1 @@
+{"buildTargets":["container","createdb","dropdb","image","postgres","test"],"launchTargets":[],"customConfigurationProvider":{"workspaceBrowse":{"browsePath":[],"compilerArgs":[]},"fileIndex":[]}}
