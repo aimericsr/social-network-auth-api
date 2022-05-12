@@ -11,8 +11,10 @@ func MakeMigration(dbSource string) error {
 	if err != nil {
 		return err
 	}
+	db.Exec("CREATE EXTENSION IF NOT EXISTS \"uuid-ossp\";")
 
 	db.AutoMigrate(&model.User{})
+
 	db.Create(&model.User{Username: "admin", Password: "admin", Email: "tddest"})
 
 	return nil

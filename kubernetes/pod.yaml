@@ -1,19 +1,23 @@
-kind: Pod
 apiVersion: v1
+kind: Pod
 metadata:
   name: auth-api-pod
 spec:
   containers:
-    - name: auth-api
+    - name: auth-api-container
       image: hashicorp/http-echo
+      ports:
+      - containerPort: 8080
 
 
-kind: Service
 apiVersion: v1
+kind: Service
 metadata:
   name: auth-api-service
 spec:
   selector:
     app: auth-api
   ports:
-    - port: 8000 
+    - protocol: TCP
+      port: 8080 
+      targetPort: 8080
