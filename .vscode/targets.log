@@ -10,12 +10,11 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 make: *** No rule to make target `all'.  Stop.
 
 
-# Make data base, printed on Thu May 12 08:20:28 2022
+# Make data base, printed on Fri May 13 08:04:23 2022
 
 # Variables
 
 # automatic
- 
 <D = $(patsubst %/,%,$(dir $<))
 # automatic
 ?F = $(notdir $?)
@@ -46,7 +45,7 @@ __CFBundleIdentifier = com.microsoft.VSCode
 # environment
 INFOPATH = /opt/homebrew/share/info:
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /var/folders/qq/km9jrdt563q_fz4yrdx9yv240000gn/T/vscode-ipc-ad216d8b-10cb-4755-bc3a-9867b31b105e.sock
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/qq/km9jrdt563q_fz4yrdx9yv240000gn/T/vscode-ipc-07cb1c9b-bdce-4afd-b3ee-a1dce3ba3f00.sock
 # environment
 VSCODE_CWD = /
 # environment
@@ -56,15 +55,16 @@ PATH = /Users/aimericsorin/google-cloud-sdk/bin:/opt/homebrew/bin:/opt/homebrew/
 # environment
 GOPATH = /Users/aimericsorin/go
 # environment
-LaunchInstanceID = 5E3DB062-6685-4DE8-886E-A415EF77EF6F
+LaunchInstanceID = 62D2AFF7-7480-4A51-9042-38ECA8906732
 # environment
 VSCODE_LOG_STACK = false
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # default
+ 
 .FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
 # environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.sdfmNj4Rdc/Listeners
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.WmtDmLtllU/Listeners
 # automatic
 %F = $(notdir $%)
 # environment
@@ -125,7 +125,6 @@ MAKEFLAGS = Rrqp
 MFLAGS = -Rrqp
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
- 
 # environment
 XPC_SERVICE_NAME = application.com.microsoft.VSCode.5662429.5662435
 # environment
@@ -157,8 +156,9 @@ MAKELEVEL := 0
 # environment
 LANG = C
 # environment
-VSCODE_PID = 1111
+VSCODE_PID = 792
 # variable set hash-table stats:
+ 
 # Load=71/1024=7%, Rehash=0, Collisions=2/94=2%
 
 # Pattern-specific Variable Values
@@ -167,9 +167,9 @@ VSCODE_PID = 1111
 
 # Directories
 
-# . (device 16777229, inode 5629208): 20 files, no impossibilities.
+# . (device 16777232, inode 5629208): 21 files, no impossibilities.
 
-# 20 files, no impossibilities in 1 directories.
+# 21 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -230,7 +230,6 @@ createdb:
 #  File has not been updated.
 #  commands to execute (from `Makefile', line 5):
 	docker exec -it postgres14 createdb --username=rootUser --owner=rootUser social_network
- 
 	
 
 container:
@@ -279,6 +278,6 @@ dropdb:
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Thu May 12 08:20:28 2022
+# Finished Make data base on Fri May 13 08:04:23 2022
 
  
