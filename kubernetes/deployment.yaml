@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
       - name: auth-api
-        image: nginx:1.14.2
+        image: aimeric/festivals-app:latest
         ports:
         - containerPort: 8080
     

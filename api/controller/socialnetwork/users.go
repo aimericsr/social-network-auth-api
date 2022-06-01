@@ -1,4 +1,4 @@
-package socialNetwork
+package socialnetwork
 
 import (
 	"encoding/json"
@@ -7,9 +7,8 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/aimericsr/social-network-auth-api/db"
+	"github.com/aimericsr/social-network-auth-api/api"
 	"github.com/aimericsr/social-network-auth-api/model"
-	"github.com/aimericsr/social-network-auth-api/token"
 	"github.com/aimericsr/social-network-auth-api/util"
 )
 
@@ -23,7 +22,7 @@ func CreateAccount(w http.ResponseWriter, r *http.Request) {
 
 	hashedPassword, err := util.HashPassword(user.Password)
 
-	dbRes := db.DB.Create(&model.User{Username: user.Username, Password: hashedPassword, Email: user.Email, Description: user.Description})
+	dbRes := api.Serv.DB.Create(&model.User{Username: user.Username, Password: hashedPassword, Email: user.Email, Description: user.Description})
 	if dbRes.Error != nil {
 		fmt.Printf("err in database %v\n", dbRes.Error)
 		//log.Fatal("pb", dbRes.Error)
@@ -45,7 +44,7 @@ func Login(w http.ResponseWriter, r *http.Request) {
 	err = json.Unmarshal([]byte(resJson), &req)
 
 	user := model.User{Username: req.Username}
-	dbRes := db.DB.First(&user)
+	dbRes := api.Serv.DB.First(&user)
 	if dbRes.Error != nil {
 		fmt.Printf("err in database %v\n", dbRes.Error)
 		//log.Fatal("pb", dbRes.Error)
@@ -56,12 +55,12 @@ func Login(w http.ResponseWriter, r *http.Request) {
 		fmt.Printf("err in database %v\n", dbRes.Error)
 	}
 
-	accessToken, accessPayload, err := token.Maker.CreateToken(
-		user.Username,
-		util.Config.AccessTokenDuration,
-	)
-	if err != nil {
-		fmt.Printf("err in database %v\n", dbRes.Error)
-	}
+	// accessToken, accessPayload, err := server.Serv.TokenMaker.CreateToken(
+	// 	user.Username,
+	// 	server.Serv.Config.AccessTokenDuration,
+	// )
+	// if err != nil {
+	// 	fmt.Printf("err in database %v\n", dbRes.Error)
+	// }
 
 }

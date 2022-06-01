@@ -10,7 +10,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 make: *** No rule to make target `all'.  Stop.
 
 
-# Make data base, printed on Fri May 13 08:04:23 2022
+# Make data base, printed on Wed Jun  1 14:06:43 2022
 
 # Variables
 
@@ -35,6 +35,7 @@ VSCODE_NLS_CONFIG = {"locale":"en-gb","availableLanguages":{},"_languagePackSupp
 # environment
 _ = /usr/bin/make
 # makefile (from `Makefile', line 1)
+ 
 MAKEFILE_LIST :=  Makefile
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
@@ -45,7 +46,7 @@ __CFBundleIdentifier = com.microsoft.VSCode
 # environment
 INFOPATH = /opt/homebrew/share/info:
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /var/folders/qq/km9jrdt563q_fz4yrdx9yv240000gn/T/vscode-ipc-07cb1c9b-bdce-4afd-b3ee-a1dce3ba3f00.sock
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/qq/km9jrdt563q_fz4yrdx9yv240000gn/T/vscode-ipc-1d0593aa-f7de-46b4-88fe-f1606affc2fb.sock
 # environment
 VSCODE_CWD = /
 # environment
@@ -55,16 +56,15 @@ PATH = /Users/aimericsorin/google-cloud-sdk/bin:/opt/homebrew/bin:/opt/homebrew/
 # environment
 GOPATH = /Users/aimericsorin/go
 # environment
-LaunchInstanceID = 62D2AFF7-7480-4A51-9042-38ECA8906732
+LaunchInstanceID = CB451D5F-6D37-4924-8FD6-249EB4C65D48
 # environment
 VSCODE_LOG_STACK = false
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # default
- 
 .FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
 # environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.WmtDmLtllU/Listeners
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.gNgfsm5NQt/Listeners
 # automatic
 %F = $(notdir $%)
 # environment
@@ -84,7 +84,7 @@ HOME = /Users/aimericsorin
 # default
 MAKEFILEPATH = $(shell /usr/bin/xcode-select -print-path 2>/dev/null || echo /Developer)/Makefiles
 # environment
-VSCODE_CODE_CACHE_PATH = /Users/aimericsorin/Library/Application Support/Code/CachedData/da15b6fd3ef856477bf6f4fb29ba1b7af717770d
+VSCODE_CODE_CACHE_PATH = /Users/aimericsorin/Library/Application Support/Code/CachedData/c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5
 # environment
 LOGNAME = aimericsorin
 # environment
@@ -118,7 +118,7 @@ TMPDIR = /var/folders/qq/km9jrdt563q_fz4yrdx9yv240000gn/T/
 # automatic
 *F = $(notdir $*)
 # environment
-VSCODE_IPC_HOOK = /Users/aimericsorin/Library/Application Support/Code/1.67.1-main.sock
+VSCODE_IPC_HOOK = /Users/aimericsorin/Library/Application Support/Code/1.67.2-main.sock
 # makefile
 MAKEFLAGS = Rrqp
 # environment
@@ -126,7 +126,7 @@ MFLAGS = -Rrqp
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
-XPC_SERVICE_NAME = application.com.microsoft.VSCode.5662429.5662435
+XPC_SERVICE_NAME = application.com.microsoft.VSCode.7890889.7890895
 # environment
 HOMEBREW_PREFIX = /opt/homebrew
 # automatic
@@ -156,9 +156,8 @@ MAKELEVEL := 0
 # environment
 LANG = C
 # environment
-VSCODE_PID = 792
+VSCODE_PID = 7357
 # variable set hash-table stats:
- 
 # Load=71/1024=7%, Rehash=0, Collisions=2/94=2%
 
 # Pattern-specific Variable Values
@@ -167,9 +166,9 @@ VSCODE_PID = 792
 
 # Directories
 
-# . (device 16777232, inode 5629208): 21 files, no impossibilities.
+# . (device 16777229, inode 5629208): 22 files, no impossibilities.
 
-# 21 files, no impossibilities in 1 directories.
+# 22 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -229,6 +228,7 @@ createdb:
 #  File does not exist.
 #  File has not been updated.
 #  commands to execute (from `Makefile', line 5):
+ 
 	docker exec -it postgres14 createdb --username=rootUser --owner=rootUser social_network
 	
 
@@ -278,6 +278,6 @@ dropdb:
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Fri May 13 08:04:23 2022
+# Finished Make data base on Wed Jun  1 14:06:43 2022
 
  

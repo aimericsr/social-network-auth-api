@@ -23,7 +23,7 @@ func Open(dbSource string) (DB *gorm.DB, err error) {
 	return DB, nil
 }
 
-func Close() error {
+func Close(DB *gorm.DB) error {
 	sqlDB, err := DB.DB()
 	if err != nil {
 		return err
