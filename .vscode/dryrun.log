@@ -1,5 +1,0 @@
-make --dry-run --always-make --keep-going --print-directory
-make: Entering directory `/Users/aimericsorin/Documents/Pro/epsi_b3/test-integration/social-network-auth-api'
-docker run -d --name postgres14 -e POSTGRES_USER=rootUser -e POSTGRES_PASSWORD=secretPassword -p 5432:5432 postgres:14-alpine
-make: Leaving directory `/Users/aimericsorin/Documents/Pro/epsi_b3/test-integration/social-network-auth-api'
- 
