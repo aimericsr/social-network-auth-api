@@ -7,8 +7,10 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 
 # This program built for i386-apple-darwin11.3.0
  
+make: *** No rule to make target `all'.  Stop.
 
-# Make data base, printed on Fri Jun  3 09:07:43 2022
+
+# Make data base, printed on Fri Jun  3 09:39:52 2022
 
 # Variables
 
@@ -25,6 +27,7 @@ VSCODE_LOG_NATIVE = false
 # automatic
 @F = $(notdir $@)
 # makefile
+ 
 CURDIR := /Users/aimericsorin/Documents/Pro/epsi_b3/test-integration/social-network-auth-api
 # makefile
 SHELL = /bin/sh
@@ -43,7 +46,7 @@ __CFBundleIdentifier = com.microsoft.VSCode
 # environment
 INFOPATH = /opt/homebrew/share/info:
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /var/folders/qq/km9jrdt563q_fz4yrdx9yv240000gn/T/vscode-ipc-7effc656-01ff-4c47-a205-4dc070f0a0bb.sock
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/qq/km9jrdt563q_fz4yrdx9yv240000gn/T/vscode-ipc-bfb1dc00-a291-4479-8335-e3a7cb404fee.sock
 # environment
 VSCODE_CWD = /
 # environment
@@ -107,9 +110,6 @@ USER = aimericsorin
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
 # default
- 
-make: *** No rule to make target `all'.  Stop.
-
 MAKE_COMMAND := /Library/Developer/CommandLineTools/usr/bin/make
 # default
 .VARIABLES := 
@@ -164,6 +164,7 @@ VSCODE_PID = 958
 
 # No pattern-specific variable values.
 
+ 
 # Directories
 
 # . (device 16777229, inode 5629208): 21 files, no impossibilities.
@@ -277,6 +278,6 @@ dropdb:
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Fri Jun  3 09:07:43 2022
+# Finished Make data base on Fri Jun  3 09:39:52 2022
 
  
