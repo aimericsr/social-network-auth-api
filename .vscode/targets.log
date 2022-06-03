@@ -7,10 +7,8 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 
 # This program built for i386-apple-darwin11.3.0
  
-make: *** No rule to make target `all'.  Stop.
 
-
-# Make data base, printed on Wed Jun  1 16:20:18 2022
+# Make data base, printed on Fri Jun  3 09:07:43 2022
 
 # Variables
 
@@ -45,7 +43,7 @@ __CFBundleIdentifier = com.microsoft.VSCode
 # environment
 INFOPATH = /opt/homebrew/share/info:
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /var/folders/qq/km9jrdt563q_fz4yrdx9yv240000gn/T/vscode-ipc-cce38700-955d-4971-b929-de9e1b1a6f42.sock
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/qq/km9jrdt563q_fz4yrdx9yv240000gn/T/vscode-ipc-7effc656-01ff-4c47-a205-4dc070f0a0bb.sock
 # environment
 VSCODE_CWD = /
 # environment
@@ -55,7 +53,7 @@ PATH = /Users/aimericsorin/google-cloud-sdk/bin:/opt/homebrew/bin:/opt/homebrew/
 # environment
 GOPATH = /Users/aimericsorin/go
 # environment
-LaunchInstanceID = CB451D5F-6D37-4924-8FD6-249EB4C65D48
+LaunchInstanceID = FB43B695-F105-42C3-86BB-FF8E1329FA1B
 # environment
 VSCODE_LOG_STACK = false
 # environment
@@ -63,7 +61,7 @@ ELECTRON_RUN_AS_NODE = 1
 # default
 .FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
 # environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.gNgfsm5NQt/Listeners
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.E2qc8XeOg4/Listeners
 # automatic
 %F = $(notdir $%)
 # environment
@@ -109,6 +107,9 @@ USER = aimericsorin
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
 # default
+ 
+make: *** No rule to make target `all'.  Stop.
+
 MAKE_COMMAND := /Library/Developer/CommandLineTools/usr/bin/make
 # default
 .VARIABLES := 
@@ -155,7 +156,7 @@ MAKELEVEL := 0
 # environment
 LANG = C
 # environment
-VSCODE_PID = 13775
+VSCODE_PID = 958
 # variable set hash-table stats:
 # Load=71/1024=7%, Rehash=0, Collisions=2/94=2%
 
@@ -276,6 +277,6 @@ dropdb:
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Wed Jun  1 16:20:18 2022
+# Finished Make data base on Fri Jun  3 09:07:43 2022
 
  
