@@ -1,0 +1,5 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory `/Users/aimericsorin/Documents/Pro/epsi_b3/test-integration/social-network-auth-api'
+protoc --go-grpc_out=require_unimplemented_servers=false:internal/adapters/framework/left/grpc --proto_path=internal/adapters/framework/left/grpc/proto internal/adapters/framework/left/grpc/proto/arithmetic_svc.proto
+make: Leaving directory `/Users/aimericsorin/Documents/Pro/epsi_b3/test-integration/social-network-auth-api'
+ 
