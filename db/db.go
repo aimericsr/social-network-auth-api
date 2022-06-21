@@ -50,12 +50,8 @@ func MakeMigration(dbSource string) error {
 	`)
 
 	db.AutoMigrate(&model.User{})
-	db.AutoMigrate(&model.Sessions{})
-
-	db.Exec(`
-		CREATE OR REPLACE TRIGGER users_update_timestamp BEFORE UPDATE
-		ON users FOR EACH ROW EXECUTE PROCEDURE function_update_timestamp();
-	`)
+	db.AutoMigrate(&model.User{})
+	db.AutoMigrate(&model.User{})
 
 	//db.Create(&model.User{Username: "admin", Password: "admin", Email: "tddest"})
 

@@ -4,6 +4,7 @@ import (
 	"log"
 
 	"github.com/aimericsr/social-network-auth-api/api"
+	"github.com/aimericsr/social-network-auth-api/db"
 	"github.com/aimericsr/social-network-auth-api/util"
 )
 
@@ -12,6 +13,8 @@ func main() {
 	if err != nil {
 		log.Fatal("Cannot load config variables:", err)
 	}
+
+	db.MakeMigration(config.DBSource)
 
 	err = api.NewServer(config)
 	if err != nil {
