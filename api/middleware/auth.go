@@ -43,7 +43,7 @@ func BasicAuth(h http.HandlerFunc, tokenMaker token.Maker) http.HandlerFunc {
 			w.Write([]byte("invalid token"))
 		}
 
-		ctx := context.WithValue(r.Context(), authorizationPayloadKey, payload)
-		next(w, r.WithContext(ctx))
+		_ = context.WithValue(r.Context(), authorizationPayloadKey, payload)
+		//next(w, r.WithContext(ctx))
 	})
 }
