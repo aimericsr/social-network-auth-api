@@ -17,6 +17,6 @@ jobs:
           registry: gcr.io
           project_id: kubernetessandbox-352207
           image_name: festival-app-rest
-          image_tag: 0.0.4
+          image_tag: 0.0.5
           dockerfile: Dockerfile
           context: .
