@@ -1,0 +1,22 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ rest-api ]
+
+jobs:
+
+  build-and-push-to-gcr:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v2
+      - uses: RafikFarhad/push-to-gcr-github-action@v4.1
+        with:
+          gcloud_service_key: ${{ secrets.GCLOUD_SERVICE_KEY }}
+          registry: gcr.io
+          project_id: kubernetessandbox-352207
+          image_name: festival-app-rest
+          image_tag: 0.0.4
+          dockerfile: Dockerfile
+          context: .
