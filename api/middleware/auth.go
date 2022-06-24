@@ -14,8 +14,9 @@ const (
 	authorizationPayloadKey = "authorization_payload"
 )
 
-func BasicAuth(next http.HandlerFunc, tokenMaker token.Maker) http.HandlerFunc {
+func BasicAuth(h http.HandlerFunc, tokenMaker token.Maker) http.HandlerFunc {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+
 		authorizationHeader := r.Header.Get(authorizationHeaderKey)
 
 		if len(authorizationHeader) == 0 {

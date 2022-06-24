@@ -16,6 +16,8 @@ require (
 	github.com/aead/poly1305 v0.0.0-20180717145839-3fee0db0b635 // indirect
 	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/fsnotify/fsnotify v1.5.1 // indirect
+	github.com/go-kit/log v0.2.0 // indirect
+	github.com/go-logfmt/logfmt v0.5.1 // indirect
 	github.com/hashicorp/hcl v1.0.0 // indirect
 	github.com/jackc/chunkreader/v2 v2.0.1 // indirect
 	github.com/jackc/pgconn v1.12.0 // indirect
@@ -44,8 +46,10 @@ require (
 )
 
 require (
+	github.com/go-chi/chi v4.1.2+incompatible
+	github.com/go-chi/render v1.0.1
+	github.com/go-kit/kit v0.12.0
 	github.com/gofrs/uuid v4.2.0+incompatible // indirect
-	github.com/gorilla/mux v1.8.0
 	github.com/jinzhu/inflection v1.0.0 // indirect
 	github.com/jinzhu/now v1.1.4 // indirect
 	github.com/spf13/viper v1.11.0

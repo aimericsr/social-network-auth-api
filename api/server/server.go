@@ -1,13 +1,14 @@
-package api
+package server
 
 import (
 	"fmt"
 	"net/http"
 
-	"github.com/aimericsr/social-network-auth-api/api/controller/generic"
+	"github.com/aimericsr/social-network-auth-api/api/handler"
+	"github.com/aimericsr/social-network-auth-api/db"
 	"github.com/aimericsr/social-network-auth-api/token"
 	"github.com/aimericsr/social-network-auth-api/util"
-	"github.com/gorilla/mux"
+	"github.com/go-chi/chi"
 	"gorm.io/gorm"
 )
 
@@ -17,7 +18,7 @@ type Server struct {
 	Config     util.Config
 	TokenMaker token.Maker
 	DB         *gorm.DB
-	Router     *mux.Router
+	Router     *chi.Mux
 }
 
 func NewServer(config util.Config) (err error) {
@@ -31,33 +32,23 @@ func NewServer(config util.Config) (err error) {
 	// 	return fmt.Errorf("Cannot connect to database:", err)
 	// }
 
+	db.MakeMigration(config.DBSource)
+
+	router := handler.NewHandler(tokenMaker)
+
 	server := &Server{
 		Config:     config,
 		TokenMaker: tokenMaker,
 		DB:         nil,
+		Router:     router,
 	}
-
-	server.setupRouter()
 
 	Serv = server
 
-	fmt.Printf("Server listening on port %v\n", config.ServerAddress)
 	err = http.ListenAndServe(":"+config.ServerAddress, server.Router)
 	if err != nil {
-		return fmt.Errorf("Cannot start api on the port:", err)
+		return err
 	}
-
+	fmt.Printf("Server listening on port %v\n", config.ServerAddress)
 	return nil
-}
-
-func (server *Server) setupRouter() {
-	router := mux.NewRouter()
-
-	router.HandleFunc("/v1/health", generic.HealthCheck).Methods("GET")
-
-	// router.HandleFunc("/users", socialnetwork.CreateAccount).Methods("POST")
-
-	// router.HandleFunc("/users/protected", middleware.BasicAuth(socialnetwork.CreateAccount, server.TokenMaker)).Methods("POST")
-
-	server.Router = router
 }
